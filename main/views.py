@@ -11,3 +11,6 @@ def test(request):
 
 def third(request):
     return HttpResponse("This is page test3")
+
+#def dz1(request):
+    #return render(request, "dz1.html")
