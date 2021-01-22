@@ -6,11 +6,6 @@ def homepage(request):
 def test(request):
     return render(request, "test.html")
 
-#def second(request):
-    #return HttpResponse("test 2 page")
 
 def third(request):
     return HttpResponse("This is page test3")
-
-#def dz1(request):
-    #return render(request, "dz1.html")
