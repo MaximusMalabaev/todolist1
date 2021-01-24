@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse, test
+from django.shortcuts import render, HttpResponse
 from .models import ToDo, Book
 
 def homepage(request):
