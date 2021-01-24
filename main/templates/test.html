@@ -5,23 +5,22 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Todolist</title>
-         <!-- <link rel="stylesheet" href="./styles/index.css" /> -->
-         <link rel="stylesheet" href="{% static 'styles/index.css' %}" />
-         <!--<link rel="stylesheet" href="./styles/checkbox.css" />--> 
-         <link rel="stylesheet" href="{% static 'styles/checkbox.css' %}"
+        <!-- <link rel="stylesheet" href="./styles/index.css" /> -->
+        <link rel="stylesheet" href="{% static 'styles/index.css' %}" />
+       <!--<link rel="stylesheet" href="./styles/checkbox.css" />--> 
+        <link rel="stylesheet" href="{% static 'styles/checkbox.css' %}" />
     </head>
-<body>
-    <section>
+    <body>
+    <body>
+        <section>
+             <div class="create_container">
+                 <input class="create_input" type="text" placeholder="Напишите сюда новую задачу" />
+                <button class="create_button">Добавить</button>
+            </div>
 
-        <div class="create_container">
-            <input class="create_input" type="text" placeholder="Напишите сюда новую задачу" />
-            <button class="create_button">Добавить</button>
-
-        </div>
-
-        <div class="todo_container">
+            <div class="todo_container">
               {% for todo in todo_list %}
-            <div class="todo_item">
+                <div class="todo_item">
                 <div class="todo_item_header">
                     <label class="checkbox_container">
                         <input type="checkbox" />
