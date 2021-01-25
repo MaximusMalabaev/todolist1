@@ -6,12 +6,14 @@
     <title>Books</title>
 </head>
 <body>
-    <form method="POST">
+    <form action="{% url 'add-book' %}" method="POST">
+        {% csrf_token %}
         <h1>Добавить</h1>
         <input type="text" name="title" placeholder="Заголовок"><br><br>
         <input type="text" name="subtitle" placeholder="Подзаголовок"><br><br>
         <input type="text" name="description" placeholder="Описание"><br><br>
         <input type="number" name="price" placeholder="Цена"><br><br>
+        <input type="text" name="genre" placeholder="Жанр"><br><br>
         <input type="text" name="author" placeholder="Автор"><br><br>
         <input type="datetime-local" name="year" placeholder="Год"><br><br>
         <button>Добавить</button>
