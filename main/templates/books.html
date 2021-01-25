@@ -22,7 +22,12 @@
     {% for book in books %}
         <div>
             <h3>{{ book.title }} - {{ book.author }}</h3>
+            <h3>{{ book.subtitle }}</h3>
             <h4>{{ book.price }}</h4>
+            <h4>{{ book.description }}</h4>
+            <h4>{{ book.genre }}</h4>
+            <h4>{{ book.year }}</h4>
+
         </div>
     {% endfor %}
 </body>
