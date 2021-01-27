@@ -4,9 +4,9 @@ from .models import ToDo, Book
 def homepage(request):
     return render(request, "index.html")
     
-def test(request):
+def test1(request):
     todo_list = ToDo.objects.all()
-    return render(request, "test.html", {"todo_list": todo_list})
+    return render(request, "test1.html", {"todo_list": todo_list})
 
 def books(request):
     books = Book.objects.all()
@@ -17,7 +17,7 @@ def add_todo(request):
     text = form["todo_text"]
     todo = ToDo(text=text)
     todo.save()
-    return redirect(test)
+    return redirect(test1)
 
 def add_book(request):
     form = request.POST
@@ -36,4 +36,17 @@ def add_book(request):
 def delete_todo(request, id):
     todo = ToDo.objects.get(id=id)
     todo.delete()
-    return redirect(test)
+    return redirect(test1)
+
+def mark_todo(request, id):
+    todo = ToDo.objects.get(id=id)
+    todo.is_favorite = not todo.is_favorite
+    todo.save()
+    return redirect(test1)
+
+
+def unmark_todo(request, id):
+    todo = ToDo.objects.get(id=id)
+    todo.is_favorite = False
+    todo.save()
+    return redirect(test1)
